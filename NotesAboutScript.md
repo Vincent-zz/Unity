@@ -24,9 +24,7 @@ P.S.尽量不要在`Update()`函数中使用，一般写在`Start()`函数中
 
 首先，辨明`gameObject`与`GameObject`的区别： 
 
-~显然，在于开头的大小写~ `gameObject`在脚本中的意思就是**此脚本所挂载的游戏物件**；而`GameObject`是游戏物件的类名。 
-
-![`gameObject`与`GameObject`的区别](https://github.com/Vincent-zz/Unity/blob/main/image-storage/%E5%9B%BE1.png?raw=true)
+~显然，在于开头的大小写~ `gameObject`在脚本中的意思就是**此脚本所挂载的游戏物件**，例如在脚本中添加`Destroy(gameObject);`，执行时将会删除脚本所挂载的实例；而`GameObject`是游戏物件的类名，`Hierarchy`窗口中的所有东西都是`GameObject`的实例，在脚本中也可以定义`GameObject`类的变量，如`public GameObject 变量名`；同时，`GameObject` 
 
 ### Function（函数） 
 

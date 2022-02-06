@@ -6,7 +6,7 @@
 
 **Unity Notes** 
 
-[Unity学习笔记](https://github.com/Vincent-zz/Unity/blob/main/UnityNote.md) 
+[Unity学习笔记](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md) 
 
 **My Creation** 
 

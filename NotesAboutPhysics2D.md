@@ -1,9 +1,9 @@
-**Component** 
+###Component
 
 Rigidbody2D（刚体） 
 
 Collider2D（碰撞体） 
 
-**Collision & Trigger** 
+###Collision & Trigger
 
 碰撞 & 触发

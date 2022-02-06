@@ -5,4 +5,9 @@
 - **Unity基本界面** -> <https://www.jianshu.com/p/3977a270a6cb>
 - **资源导入与管理** [NotesAboutAsset](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAsset.md)
 - **关于物理系统** [NotesAboutPhysics2D](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPhysics2D.md) 
-- **关于脚本** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
+- **脚本基础** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
+- **动画状态机**
+- **移动实现**
+- **射击实现**
+- **瓦片地图**
+- **UI**

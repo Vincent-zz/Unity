@@ -6,8 +6,9 @@
 - **资源导入与管理** [NotesAboutAsset](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAsset.md)
 - **关于物理系统** [NotesAboutPhysics2D](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPhysics2D.md) 
 - **脚本基础** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
+  - **碰撞检测** [NotesAboutCollision](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollision.md)
+  - **移动实现**
+  - **射击实现**
 - **动画状态机**
-- **移动实现**
-- **射击实现**
 - **瓦片地图**
 - **UI**

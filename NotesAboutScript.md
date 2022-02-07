@@ -32,9 +32,7 @@ void Start(){
 
 **游戏物件的获取** ： 
 
-当前游戏物件： 
-
-即`gameObject`; 
+当前游戏物件：即`gameObject`; 
 
 获取特定的游戏物件： 
 

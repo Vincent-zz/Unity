@@ -1,4 +1,4 @@
-### Get GameObject & Component（获取游戏物件及其组件） 
+## Get GameObject & Component（获取游戏物件及其组件） 
 
 0、`public`获取 
 
@@ -38,7 +38,7 @@ void Start(){
 
 （2）`transform.Find("游戏物件名")`用于获取子物体的组件，例如每一个clone出来的游戏物件enemy都有叫firepoint的子物体来表示子弹生成的位置（开火位置），此时要获取firepoint的transform组件， 
 
-### Function（函数） 
+## Function（函数） 
 
 1、`void Start()` 
 
@@ -49,5 +49,5 @@ void Start(){
 3、`//碰撞` 
 
 4、`//`
-### Input（输入） 
+## Input（输入） 
 

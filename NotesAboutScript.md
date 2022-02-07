@@ -40,6 +40,14 @@ void Start(){
 
 ### Function（函数） 
 
+1、`void Start()` 
 
+挂载此脚本的游戏物件一旦在场景中生成，将会调用一遍`Start()`函数 
+
+2、`void Update()`与`void FixedUpdate()` 
+
+3、`//碰撞` 
+
+4、`//`
 ### Input（输入） 
 

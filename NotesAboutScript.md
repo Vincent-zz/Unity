@@ -28,7 +28,7 @@ void Start(){
 
 首先，辨明`gameObject`与`GameObject`的区别： 
 
-~显然，在于开头的大小写~ `gameObject`在脚本中的意思就是**此脚本所挂载的游戏物件**，例如在脚本中添加`Destroy(gameObject);`，执行时将会删除脚本所挂载的实例；而`GameObject`是游戏物件的类名，`Hierarchy`窗口中的所有东西都是`GameObject`的实例，在脚本中也可以定义`GameObject`类的成员变量，如`public GameObject 变量名`，再在Unity中将prefab拖拽到此处。 
+~显然，在于开头的大小写~ **单纯的**`gameObject`在脚本中的意思就是**此脚本所挂载的游戏物件**，例如在脚本中添加`Destroy(gameObject);`，执行时将会删除脚本所挂载的实例；而`GameObject`是游戏物件的类名，`Hierarchy`窗口中的所有东西都是`GameObject`的实例，在脚本中也可以定义`GameObject`类的成员变量，如`public GameObject 变量名`，再在Unity中将prefab拖拽到此处。 
 
 **游戏物件的获取** ： 
 
@@ -36,7 +36,22 @@ void Start(){
 
 获取特定的游戏物件：（1）`GameObject.Find("游戏物件名")`获取（`Find()`函数应该是`GameObject`类的静态函数） 
 
-（2）`transform.Find("游戏物件名")`用于获取子物体的组件，例如每一个clone出来的游戏物件enemy都有叫firepoint的子物体来表示子弹生成的位置（开火位置），此时要获取firepoint的transform组件， 
+  也可以指定路径，例如`GameObject.Find("游戏物件名/子游戏物件名/子游戏物件的子游戏物件名")`，可以减小开销 
+
+（2）`transform.Find("游戏物件名")`用于获取子物体的Transform组件，例如每一个clone出来的游戏物件enemy都有叫firepoint的子物体来表示子弹生成的位置（开火位置）， 
+
+要获取firepoint的Rigidbody2D示例：
+
+```C#
+...
+private Rigidbody2D rig;
+...
+void Start(){
+  rig = transform.Find("firepoint").gameObject.GetComponent<Rigidbody2D>();
+}
+...
+``` 
+
 
 ## Function（函数） 
 
@@ -50,4 +65,3 @@ void Start(){
 
 4、`//`
 ## Input（输入） 
-

@@ -6,7 +6,7 @@
 - **关于物理系统** [NotesAboutPhysics2D](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPhysics2D.md) 
 - **脚本基础** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
   - **碰撞检测** [NotesAboutCollision](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollision.md)
-  - **移动实现**
+  - **移动实现** [NotesAboutPlayer-Move](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Move.md)
   - **射击实现**
 - **动画状态机**
 - **瓦片地图**

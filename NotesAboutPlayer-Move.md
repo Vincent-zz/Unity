@@ -13,7 +13,6 @@ public class player_move : MonoBehaviour
     private Rigidbody2D rig;
     private Animator anim;
     private CapsuleCollider2D coll;
-    private Transform trans;
 
     public float jumpforce;
     public float deltaforce;
@@ -27,19 +26,16 @@ public class player_move : MonoBehaviour
     private bool isGround;
     private bool isRun;
 
-    // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<CapsuleCollider2D>();
-        trans = GetComponent<Transform>();
         isRight = true;
         isRun = false;
         rig.velocity = new Vector3(8.8f, 0f, 0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (coll.IsTouchingLayers(ground))
@@ -58,7 +54,7 @@ public class player_move : MonoBehaviour
             {
                 if (!isRight)
                 {
-                    trans.Rotate(new Vector3(0f, -180f, 0f));
+                    transform.Rotate(new Vector3(0f, -180f, 0f));
                     isRight = true;
                 }
                 anim.SetBool("idle", false);
@@ -69,7 +65,7 @@ public class player_move : MonoBehaviour
             {
                 if (isRight)
                 {
-                    trans.Rotate(new Vector3(0f, 180f, 0f));
+                    transform.Rotate(new Vector3(0f, 180f, 0f));
                     isRight = false;
                 }
                 anim.SetBool("idle", false);
@@ -82,6 +78,7 @@ public class player_move : MonoBehaviour
                 anim.SetBool("idle", true);
             }
         }
+
         else 
         {
             anim.SetBool("idle", false);
@@ -90,7 +87,7 @@ public class player_move : MonoBehaviour
             {
                 if (!isRight)
                 {
-                    trans.Rotate(new Vector3(0f, -180f, 0f));
+                    transform.Rotate(new Vector3(0f, -180f, 0f));
                     isRight = true;
                 }
                 rig.velocity = new Vector3(speedInTheAir, rig.velocity.y, 0f);
@@ -99,7 +96,7 @@ public class player_move : MonoBehaviour
             {
                 if (isRight)
                 {
-                    trans.Rotate(new Vector3(0f, 180f, 0f));
+                    transform.Rotate(new Vector3(0f, 180f, 0f));
                     isRight = false;
                 }
                 rig.velocity = new Vector3(-speedInTheAir, rig.velocity.y, 0f);
@@ -126,7 +123,7 @@ public class player_move : MonoBehaviour
     }
 }
 
-//左右动画不相同时
+//左右动画不相同
  void Update()
     {
         if (coll.IsTouchingLayers(ground))
@@ -252,4 +249,5 @@ public class player_move : MonoBehaviour
         }
     }
  */
+
 ```

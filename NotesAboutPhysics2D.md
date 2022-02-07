@@ -2,6 +2,18 @@
 
 Rigidbody2D（刚体） 
 
+**Body Type** 
+
+`Dynamic` 
+
+`Kinematic` 
+
+`Static` 
+
+**Collision Detection** 
+
+**Constraints** 
+
 Collider2D（碰撞体） 
 
 ### Collision & Trigger

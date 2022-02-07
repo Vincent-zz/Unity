@@ -26,17 +26,21 @@ void Start(){
 
 2、`游戏物件.Getcomponent<T>()`获取某个游戏物件的组件 
 
-首先，辨明`gameObject`与`GameObject`的区别： 
+\*首先辨明`gameObject`与`GameObject`的区别： 
 
 ~显然，在于开头的大小写~ **单纯的**`gameObject`在脚本中的意思就是**此脚本所挂载的游戏物件**，例如在脚本中添加`Destroy(gameObject);`，执行时将会删除脚本所挂载的实例；而`GameObject`是游戏物件的类名，`Hierarchy`窗口中的所有东西都是`GameObject`的实例，在脚本中也可以定义`GameObject`类的成员变量，如`public GameObject 变量名`，再在Unity中将prefab拖拽到此处。 
 
 **游戏物件的获取** ： 
 
-当前游戏物件：即`gameObject`; 
+当前游戏物件： 
 
-获取特定的游戏物件：（1）`GameObject.Find("游戏物件名")`获取（`Find()`函数应该是`GameObject`类的静态函数） 
+即`gameObject`; 
 
-  也可以指定路径，例如`GameObject.Find("游戏物件名/子游戏物件名/子游戏物件的子游戏物件名")`，可以减小开销 
+获取特定的游戏物件： 
+
+（1）`GameObject.Find("游戏物件名")`获取（`Find()`函数应该是`GameObject`类的静态函数） 
+
+也可以指定路径，例如`GameObject.Find("游戏物件名/子游戏物件名/子游戏物件的子游戏物件名")`，可以减小开销 
 
 （2）`transform.Find("游戏物件名")`用于获取子物体的Transform组件，例如每一个clone出来的游戏物件enemy都有叫firepoint的子物体来表示子弹生成的位置（开火位置）， 
 
@@ -51,6 +55,9 @@ void Start(){
 }
 ...
 ``` 
+
+\*关于`transform`与`Transform`以及`transform.gameObject`，`transform.gameObject`的套娃调用： 
+
 
 
 ## Function（函数） 

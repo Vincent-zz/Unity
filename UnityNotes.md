@@ -7,7 +7,7 @@
 - **脚本基础** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
   - **碰撞检测** [NotesAboutCollision](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollision.md)
   - **移动实现** [NotesAboutPlayer-Move](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Move.md)
-  - **射击实现**
-- **动画状态机**
-- **瓦片地图**
-- **UI**
+  - **射击实现** [NotesAboutPlayer-Shoot](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Shoot.md)
+- **动画状态机** [NotesAboutAnimator](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAnimator.md)
+- **瓦片地图** [NotesAboutTilemap](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTilemap.md)
+- **UI** [NotesAboutUI](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutUI.md)

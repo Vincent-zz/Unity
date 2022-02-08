@@ -1,8 +1,8 @@
 ## `Layer`, `Sorting Layer`, `Tag`三者的区别 
 
-- `Sorting Layer`：位于`Sprite Renderer`组件中，管理的是渲染的显示层级，同一个Sorting Layer的游戏物件的显示层级由`Order in Layer`的大小决定  
+- `Sorting Layer`：位于Sprite Renderer组件中，管理的是渲染的显示层级，同一个Sorting Layer的游戏物件的显示层级由`Order in Layer`的大小决定  
 
-- `Layer`：位于`inspector`窗口右上角，可应用于碰撞检测与射线检测，是LayerMask类的实例 
+- `Layer`：位于inspector窗口右上角，可应用于碰撞检测与射线检测，是LayerMask类的实例 
 
 获取：`游戏物件.layer`
 

@@ -1,10 +1,10 @@
 ## Get GameObject & Component（获取游戏物件及其组件） 
 
-- `public`获取 
+### `public`获取 
 
 将组件类型的成员变量定义为`public`，在Unity中直接拖拽获取 
 
-- `Getcomponent<T>()`获取组件 
+### `Getcomponent<T>()`获取组件 
 
 script类继承了MonoBehaviour类的`Getcomponent<T>()`来获取 **此脚本挂载的游戏物件** 的组件 
 
@@ -24,7 +24,7 @@ void Start(){
 
 注意：`Getcomponent<T>()`一般写在`Start()`函数中，尽量不要在`Update()`函数中使用 
 
-- `游戏物件.Getcomponent<T>()`获取某个游戏物件的组件 
+### `游戏物件.Getcomponent<T>()`获取某个游戏物件的组件 
 
 \* 首先辨明`gameObject`与`GameObject`的区别： 
 

@@ -75,4 +75,4 @@ void Start(){
 - `//`
 ## Input（输入） 
 
-## De bug 
+## Debug 

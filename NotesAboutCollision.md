@@ -1,11 +1,17 @@
 ## `Layer`, `Sorting Layer`, `Tag`三者的区别 
 
-`Layer`：位于`inspector`窗口右上角，管理的是碰撞； 
+- `Sorting Layer`：位于`Sprite Renderer`组件中，管理的是渲染的显示层级，同一个Sorting Layer的游戏物件的显示层级由`Order in Layer`的大小决定  
 
-`Sorting Layer`：位于`Sprite Renderer`组件中，管理的是渲染的显示层级，同一个Sorting Layer的游戏物件的显示层级由`Order in Layer`的大小决定 
+- `Layer`：位于`inspector`窗口右上角，可应用于碰撞检测与射线检测，是LayerMask类的实例 
 
-`Tag`： 
+获取：`游戏物件.layer`
 
-##碰撞检测方法 
+- `Tag`： 用于标识游戏物件，可以通过tag查找游戏物件以及在碰撞时标识物体 
 
-LayerMask      Physics2D.Linecast
+获取：`此游戏物件的任意组件.tag`或`游戏物件.tag` 
+
+## 碰撞检测方法 
+
+OnCollisionEnter Physics2D.Linecast 
+
+LayerMask 

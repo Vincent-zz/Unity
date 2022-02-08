@@ -12,6 +12,13 @@
 
 ## 碰撞检测方法 
 
-OnCollisionEnter Physics2D.Linecast 
+- 碰撞发生时调用的函数 
+
+ 
+- 使用LayerMask 
 
 LayerMask 
+
+- 射线检测 
+
+Physics2D.Linecast 

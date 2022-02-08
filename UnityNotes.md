@@ -1,5 +1,5 @@
 # UnityNote
-**笔记**和**资料** 
+
 - **番外：像素艺术** 用*Aseprite*绘制角色动画与场景，[去看这个骚男人的视频！](https://www.bilibili.com/video/BV1Ty4y1L7yC?spm_id_from=333.999.0.0) 
 - **Unity基本界面** 这篇文章里有较好的介绍 -> <https://www.jianshu.com/p/3977a270a6cb>
 - **资源导入与管理** [NotesAboutAsset](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAsset.md)
@@ -11,3 +11,5 @@
 - **动画状态机** [NotesAboutAnimator](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAnimator.md)
 - **瓦片地图** [NotesAboutTilemap](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTilemap.md)
 - **UI** [NotesAboutUI](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutUI.md)
+ 
+自己总结的一些笔记和资料，能被路过的大佬指出不足是我的荣幸 

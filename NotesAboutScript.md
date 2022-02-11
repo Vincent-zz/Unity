@@ -54,6 +54,8 @@ void Start(){
 ...
 ``` 
 
+（3）`transform.parent`获取父物体的Transform组件 
+
  \* `transform`与`Transform`:（类比`gameObject`与`GameObject`）  
  
  `transform`代表了此脚本挂载的游戏物件的Transform组件，与`gameObject`类似，是现成的（毕竟任何一个游戏物件都必须有Transform组件）；`Transform`则是Transform组件的类名

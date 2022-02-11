@@ -26,9 +26,9 @@ more：四元数、欧拉角……
 
 ### 使用物理系统移动 
 
-（1）施加力：`刚体组件.Addforce(xForce, yForce, zForce);` 
+（1）施加力（世界坐标）：`刚体组件.Addforce(xForce, yForce, zForce);` 
 
-（2）施加速度：`刚体组件.velocity = new Vector(xVelocity, yVelocity, zVelocity);` 
+（2）施加速度（世界坐标）：`刚体组件.velocity = new Vector(xVelocity, yVelocity, zVelocity);` 
 
 ### 使用Unity现成的CharactorController 
 

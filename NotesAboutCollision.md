@@ -52,7 +52,7 @@
 
 射线定义：`Ray example = new Ray(指定position, 方向向量)` 
 
-射线检测：返回bool值 
+射线检测：返回？ 
 
 ```C#
 RaycastHit hitInfo;//射线碰撞信息

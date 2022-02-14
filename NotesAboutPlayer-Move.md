@@ -14,7 +14,7 @@
 
 more：四元数、欧拉角……   
 
-### 使用Transform组件移动（与物理系统无关） 
+### 使用Transform组件移动（与物理系统无关，会与物理系统发生冲突） 
 
 （1）`Transform组件.Translate(new Vector3(deltaX,deltaY,deltaZ),坐标系);`写在Update()函数中 
 
@@ -26,7 +26,7 @@ more：四元数、欧拉角……
 
 与Translate的方法看似大同小异，实则（从坐标系的角度看）差异很大，这个方法直接修改position的值，相当于是在该物体**父物体的自身坐标系**（没有父物体则为“原始坐标系”）下变换
 
-### 使用物理系统移动 
+### 使用物理系统移动（比较推荐） 
 
 （1）施加力（世界坐标方向）：`刚体组件.Addforce(xForce, yForce, zForce);` 
 

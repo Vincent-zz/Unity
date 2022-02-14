@@ -1,6 +1,6 @@
 ## Collision & Trigger
 
-(碰撞或触发的条件详见先前的[Physics2D]()) 
+(碰撞或触发的条件详见先前的[Physics2D](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPhysics2D.md)) 
 
 ### Layer, Sorting Layer, Tag三者的区别 
 
@@ -19,7 +19,7 @@
 **1、碰撞发生时调用的函数** 
 
  
-**2、使用LayerMask**（不妨称它“图层罩”，原谅我的乡土翻译） 
+**2、使用LayerMask**（不妨乡土翻译为“图层罩”） 
 
 检测某个碰撞体与指定图层中所有碰撞体的碰撞：`碰撞体.IsTouchingLayers(图层罩)`或`Physics2D.IsTouchingLayers(碰撞体, 图层罩)`返回bool值  
 
@@ -28,26 +28,20 @@
 示例： 
 
 ```C#
+    //运用LayerMask进行触地检测
     ...
-    private CapsuleCollider2D coll;
+    private BoxCollider2D foot;
     public LayerMask ground;//在Unity中选择ground对应的图层
-    private bool isGround;
+    private bool grounded;
     
     void Start()
     {
-        coll = GetComponent<CapsuleCollider2D>();
+        foot = GetComponent<BoxCollider2D>();
         ...
     }
     void Update()
     {
-        if (coll.IsTouchingLayers(ground))//等价于if(Physics2D.IsTouchingLayers(coll, ground))
-        {
-            isGround = true;
-        }
-        else
-        {
-            isGround = false;
-        }
+        grounded = foot.IsTouchingLayers(ground));//等价于Physics2D.IsTouchingLayers(foot, ground)
         ...
     }
 ``` 
@@ -56,4 +50,29 @@
 
 **3、射线检测** 
 
-Physics2D.Linecast 
+射线定义：`Ray example = new Ray(指定position, 方向向量)` 
+
+射线检测：返回bool值 
+
+```C#
+RaycastHit hitInfo;//射线碰撞信息
+Physics2D.Linecast(射线, out hitInfo , 距离（float）, 指定图层罩);//其中`射线`可由`指定position, 方向向量`代替 
+``` 
+
+射线碰撞信息可以没有（重载）；距离，指定图层罩也可以没有（默认） 
+
+示例： 
+
+```C#
+    //运用Raycast进行触地检测（向下发射一段很短的射线）
+    ...
+    public LayerMask ground;//在Unity中选择ground对应的图层
+    private bool grounded;
+
+    void Update()
+    {
+        grounded = Physics2D.Raycast(transform.Find("foot").position, -Vector3.up, 0.01f, ground);//挂载了一个叫foot的空子物件来指示位置
+        ...
+    }
+    ...
+```

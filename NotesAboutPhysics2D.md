@@ -1,6 +1,6 @@
-### Component
+## Component
 
-Rigidbody2D（刚体） 
+### Rigidbody2D（刚体） 
 
 **Body Type** 
 
@@ -14,9 +14,9 @@ Rigidbody2D（刚体）
 
 **Constraints** 
 
-Collider2D（碰撞体） 
+### Collider2D（碰撞体） 
 
-### Collision & Trigger
+## Collision & Trigger
 
 碰撞 & 触发 
 

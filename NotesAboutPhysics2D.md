@@ -18,7 +18,7 @@
 
 ## Collision & Trigger
 
-碰撞的条件：首先前提是参与碰撞的两个物体都有collider（都不为触发）。然后其中至少一个是dynamic刚体。 
+碰撞的条件：首先前提是参与碰撞的两个物体都有collider（都不为触发）。然后其中至少一个是dynamic刚体（所以说kinematic刚体不会碰上静止碰撞体）。 
 
 触发的条件：参与碰撞的两个物体都有collider且任意一个为触发 
 

@@ -80,7 +80,10 @@ void Start(){
 
 - 关于碰撞见[碰撞检测]() 
 
-- `//`
+\* `void Update()`与`void FixedUpdate()`的区别： 
+
+看了很多资料，似乎仍然不太懂（捂脸 
+
 ## Input（输入） 
 
 ## Debug 

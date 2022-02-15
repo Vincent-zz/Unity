@@ -70,9 +70,15 @@ void Start(){
 
 挂载此脚本的游戏物件一旦在场景中生成，将会调用一遍`Start()`函数 
 
-- `void Update()`与`void FixedUpdate()` 
+- `void Update()` 
 
-- `//碰撞` 
+刷新的时间`Time.deltaTime`不固定 
+
+- `void FixedUpdate()` 
+
+刷新的时间`Time.fixedDeltaTime`固定（可在edit-project setting-time中修改），常用于update物理系统相关代码 
+
+- 关于碰撞见[碰撞检测]() 
 
 - `//`
 ## Input（输入） 

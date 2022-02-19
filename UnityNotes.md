@@ -7,7 +7,7 @@
 - **脚本基础** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
   - **碰撞检测** [NotesAboutCollision](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollision.md)
   - **移动实现** [NotesAboutPlayer-Move](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Move.md)
-  - **射击实现** [NotesAboutPlayer-Shoot](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Shoot.md)
+  - **射击实现**（本质就是物件的产生与销毁） [NotesAboutPlayer-Shoot](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Shoot.md)
 - **关于时间** [NotesAboutTime](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTime.md)
 - **动画状态机** [NotesAboutAnimator](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAnimator.md)
 - **瓦片地图** [NotesAboutTilemap](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTilemap.md)

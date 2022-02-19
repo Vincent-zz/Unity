@@ -1,6 +1,6 @@
 ## 物件移动方法 
 
-\* 关于坐标系 
+\* **关于坐标系** 
 
 - Unity2D场景上的“原始坐标系”：x轴向右y轴向上z轴向里（左手螺旋）
 - 以物件为原点的两个坐标系：世界坐标系（轴向与“原始坐标系”相同），自身坐标系（初始轴向与世界坐标系重合，会随旋转改变）
@@ -13,6 +13,8 @@
 \* 由于此操作不改变子子孙孙物件的position值，所以看起来是子子孙孙物件极其自身坐标系与父物件极其自身坐标系“绑定”在一起绕父物件原点旋转
 
 more：四元数、欧拉角……   
+
+- 获取方向的简便方式：`transform.right`自身坐标系x轴方向，`transform.up`...y轴方向，`transform.forward`...z轴方向；将transform替换为Vector3则表示世界坐标的坐标轴方向 
 
 ### 使用Transform组件移动
 
@@ -32,9 +34,9 @@ more：四元数、欧拉角……
 
 \* （比较推荐） 
 
-（1）施加力（世界坐标方向）：`刚体组件.Addforce(xForce, yForce, zForce);` 
+（1）施加力：`刚体组件.Addforce(力向量);` 
 
-（2）施加速度（世界坐标方向）：`刚体组件.velocity = new Vector(xVelocity, yVelocity, zVelocity);` 
+（2）施加速度：`刚体组件.velocity = 速度向量;` 
 
 ### 使用Unity现成的CharactorController 
 

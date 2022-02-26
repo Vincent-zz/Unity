@@ -61,16 +61,13 @@ Trigger替换为Collision即为碰撞
 
 **3、射线检测** 
 
-射线定义：`Ray example = new Ray(指定position, 方向向量)` 
-
-射线检测：返回？ 
+示例： 
 
 ```C#
-RaycastHit hitInfo;//射线碰撞信息
-Physics2D.Linecast(射线, out hitInfo , 距离（float）, 指定图层罩);//其中`射线`可由`指定position, 方向向量`代替 
+RaycastHit2D hitInfo = Physics2D.Raycast(起始position, 方向向量, 距离（float）, 指定图层罩); 
 ``` 
 
-射线碰撞信息可以没有（重载）；距离，指定图层罩也可以没有（默认） 
+距离(默认Mathf.Infinity，无限长)，指定图层罩（默认所有图层） 
 
 示例： 
 
@@ -82,7 +79,7 @@ Physics2D.Linecast(射线, out hitInfo , 距离（float）, 指定图层罩);//�
 
     void Update()
     {
-        grounded = Physics2D.Raycast(transform.Find("foot").position, -Vector3.up, 0.01f, ground);//挂载了一个叫foot的空子物件来指示位置
+        grounded = Physics2D.Raycast(transform.Find("foot").position, -Vector3.up, 0.01f, Mathf.Infinity, ground);//foot为空子物件来指示位置
         ...
     }
     ...

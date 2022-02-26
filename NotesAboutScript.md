@@ -40,6 +40,8 @@ void Start(){
 
 也可以指定路径，例如`GameObject.Find("游戏物件名/子游戏物件名/子游戏物件的子游戏物件名")`，可以减小开销 
 
+\* 找不到被隐藏的物件 
+
 （2）`transform.Find("游戏物件名")`用于获取子物体的Transform组件，例如每一个clone出来的游戏物件enemy都有叫gun的子物体来表示武器， 
 
 要获取gun的Rigidbody2D示例：

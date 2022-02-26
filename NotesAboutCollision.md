@@ -18,7 +18,18 @@
 
 **1、碰撞发生时调用的函数** 
 
- 
+触发（更加常用）为例： 
+
+`OnTriggerEnter2D(Collider2D 变量名)` 
+
+`OnTriggerStay2D(Collider2D 变量名)` 
+
+`OnTriggerExit2D(Collider2D 变量名)` 
+
+很显然，分别代表触发开始、持续中、结束时调用的函数 
+
+Trigger替换为Collision即为碰撞 
+
 **2、使用LayerMask**（不妨乡土翻译为“图层罩”） 
 
 检测某个碰撞体与指定图层中所有碰撞体的碰撞：`碰撞体.IsTouchingLayers(图层罩)`或`Physics2D.IsTouchingLayers(碰撞体, 图层罩)`返回bool值  

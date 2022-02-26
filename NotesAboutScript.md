@@ -88,4 +88,10 @@ void Start(){
 
 ## Debug 
 
+常用：`Debug.Log();`通过输出debug 
+
+射线检测时画线：`Debug.DrawRay(起始position, 方向向量, 颜色, 持续时间);` 
+
+`Debug.DrawLine(起始position, 结束position, 颜色, 持续时间);` 
+
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

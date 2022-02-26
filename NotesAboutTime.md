@@ -9,7 +9,7 @@
 
 **协程** 
 
-`StartCoroutine(协程函数名(参数))`（\*也并不是马上执行的，等当前帧过了才执行） 
+`StartCoroutine(协程函数名(参数))`或`StartCoroutine("协程函数名", 参数)`（\*也并不是马上执行的，等当前帧过了才执行） 
 
 ```C#
 IEnumerator 协程函数名(参数)
@@ -22,7 +22,7 @@ IEnumerator 协程函数名(参数)
 
 `yield return new WaitForSeconds(时间)`（\*类似，时间填0f等价于yield return null，要等下一帧） 
 
-停止：`StopAllCoroutines();` 
+停止：`StopCoroutine("协程函数名");` 
 
 \* 已经启动的invoke与coroutine不会因SetActive(false)而停止 
 

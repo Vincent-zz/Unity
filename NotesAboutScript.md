@@ -80,7 +80,7 @@ void Start(){
 
 刷新的时间`Time.fixedDeltaTime`固定（可在edit-project setting-time中修改），常用于update物理系统相关代码 
 
-- 关于碰撞见[碰撞检测]() 
+- 关于碰撞见[碰撞检测](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollision.md) 
 
 \* `void Update()`与`void FixedUpdate()`的区别： 
 

@@ -8,7 +8,7 @@ using UnityEngine;
 public class player_health : MonoBehaviour
 {
     public GameObject bloodEffect;//受伤掉血的粒子特效
-    public GameObject deathMenu;//死亡时巨大的“DEATH”提示以及的UI菜单栏
+    public GameObject deathMenu;//死亡时巨大的“DEATH”提示以及UI菜单栏
     private float health;//当前血量
     public float healthmax;//血量上限
     public GameObject messageprefab;//一个DontDestroyOnLoad的物体，用于在不同场景间传递信息（比如当前关卡的初始血量应当为上一关结束时剩下的）
@@ -36,7 +36,7 @@ public class player_health : MonoBehaviour
             enemy_health.SetEnemyNum();//这个很坑，见下面enemy_health的SetEnemyNum函数
         }
     }
-    public float GetHealth()//获取当前血量的函数
+    public float GetHealth()//获取当前血量的函数，关卡结束时message(Clone)将通过它获取下一关的初始血量
     {
         return health;
     }

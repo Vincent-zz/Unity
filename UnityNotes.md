@@ -14,4 +14,4 @@
 - **瓦片地图** [NotesAboutTilemap](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTilemap.md)
 - **UI** [NotesAboutUI](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutUI.md)
  
-自己总结的一些笔记和资料，感谢路过的大佬指出不足 
+学习过程中整理的一些笔记和资料，只关于Unity2D，感谢路过的大佬指出不足 

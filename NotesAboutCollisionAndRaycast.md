@@ -59,9 +59,9 @@ Trigger替换为Collision即为碰撞
 
 \* 另外还有`刚体.IsTouchingLayers(图层罩)`可以检测此刚体上所有碰撞体与指定图层中所有碰撞体的碰撞，代码类似 
 
-**3、射线检测** 
+**3、2D射线检测** 
 
-示例： 
+2D射线检测示例： 
 
 ```C#
 RaycastHit2D hitInfo = Physics2D.Raycast(起始position, 方向向量, 距离（float）, 指定图层罩); 
@@ -79,10 +79,47 @@ RaycastHit2D hitInfo = Physics2D.Raycast(起始position, 方向向量, 距离（
 
     void Update()
     {
-        grounded = Physics2D.Raycast(transform.Find("foot").position, -Vector3.up, 0.01f, Mathf.Infinity, ground);//foot为空子物件来指示位置
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.Find("foot").position, -Vector3.up, 0.01f, Mathf.Infinity, ground);//foot为空子物件来指示位置
+        if(hitInfo != null)
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
         ...
     }
     ...
-```
+``` 
 
+以上射线检测方法只能检测射线碰上的第一个游戏物件，若要检测射线这一路上全部游戏物件可以用RaycastAll函数： 
+
+```C#
+RaycastHit2D[] hitInfo = Physics2D.RaycastAll(起始position, 方向向量, 距离（float）, 指定图层罩);
+``` 
+
+示例：
+
+```C#
+    //敌人用射线检测玩家，检测到就开火
+    ...
+    private bool shoot;
+
+    void Update()
+    {
+        RaycastHit2D[] hitInfo = Physics2D.RaycastAll(transform.Find("detect").position, transform.right);//detect为空子物体用于表示检测射线其实位置
+        if(hitInfo != null)
+        {
+            foreach(info in hitInfo)
+            {
+                if(info.tag == "player")
+                {
+                    shoot = true;//可以射击了
+                }
+            }
+        }
+            
+    }
+```
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

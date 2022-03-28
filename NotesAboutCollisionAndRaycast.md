@@ -119,8 +119,7 @@ RaycastHit2D[] hitInfo = Physics2D.RaycastAll(起始position, 方向向量, 距�
                     shoot = true;//可以射击了
                 }
             }
-        }
-            
+        }            
     }
 ```
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

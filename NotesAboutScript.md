@@ -88,6 +88,24 @@ void Start(){
 
 ## Input（输入） 
 
+**GetKey** 
+
+示例： 
+
+`Input.GetKey(KeyCode.Space)` 按住空格时为true 
+
+`Input.GetKeyDown(KeyCode.W)` 按下W时为true 
+
+`Input.GetKeyUp(KeyCode.S)` 松开S时为true 
+
+**GetButton**虚拟按钮 
+
+将上面的Key替换为Button即可，虚拟按钮可在edit - project settings - input manager中设置 
+
+示例：`Input.GetButtonDown("Fire1")`按下Fire1对应的键时为true 
+
+**GetAxis**虚拟轴 
+
 ## Debug 
 
 常用：`Debug.Log();`通过输出debug 

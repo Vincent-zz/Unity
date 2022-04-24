@@ -1,5 +1,3 @@
 像素风格2D平台射击小游戏 
 
-本人处女作（害羞） 
-
-click to download
+有一点大，分了两个压缩文件part1和part2

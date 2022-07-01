@@ -26,7 +26,7 @@
 
 1、UI锚点设置解决不同屏幕长宽比的问题 
 
-2、Canvas Scaler组件设置为`Scale With Screen Size`，UI锚点中的距离将按屏幕比例缩放，来解决不同屏幕分辨率的问题（若选择`Constant Pixel Size`则是像素角度的“距离不变”，会导致不同分辨率的屏幕下比例失调），`Screen Match Mode` 
+2、Canvas Scaler组件设置为`Scale With Screen Size`，整体UI将按屏幕比例缩放，来解决不同屏幕分辨率的问题（若选择`Constant Pixel Size`则是像素角度的距离、大小不变，可能会导致不同分辨率的屏幕下比例失调），`Screen Match Mode`用来设置缩放比的确定方式 
 
 **Panel**：放置UI，统一管理有一定相对位置关系的UI，类似于二级canvas 
 

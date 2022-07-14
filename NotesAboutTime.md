@@ -22,7 +22,7 @@ IEnumerator 协程函数名(参数)
 
 `yield return new WaitForSeconds(时间)`（\*类似，时间填0f等价于yield return null，要等下一帧） 
 
-停止：`StopCoroutine("协程函数名");` 
+停止：`StopCoroutine("协程函数名");`（背后有点小复杂） 
 
 \* 已经启动的invoke与coroutine不会因SetActive(false)而停止 
 

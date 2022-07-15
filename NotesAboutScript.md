@@ -120,4 +120,8 @@ void Start(){
 
 `Debug.DrawLine(起始position, 结束position, 颜色, 持续时间);` 
 
+更多关于代码的笔记： 
+
+[C#继承](https://github.com/Vincent-zz/Unity/blob/main/AboutC%23Inheritance.md) 
+
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

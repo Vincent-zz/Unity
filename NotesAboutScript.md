@@ -1,3 +1,9 @@
+## Monobehaviour生命周期 
+
+[盗图](https://upload-images.jianshu.io/upload_images/5408097-dcc261ee317a816e.png?imageMogr2/auto-orient/strip|imageView2/2/w/1029/format/webp) 
+
+运行机制：可以看作魔法搜索每个挂载在场景中物体上的脚本，找到其中的特殊名字的函数（Start()、Update()等，这些函数Monobehaviour类中是本没有的，并不是虚函数、抽象类、重写等机制而是magic），将这些函数按生命周期整理排列，然后依次执行 
+
 ## Get GameObject & Component（获取游戏物件及其组件） 
 
 ### `public`获取 

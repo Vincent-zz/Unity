@@ -28,4 +28,7 @@ IEnumerator 协程函数名(参数)
 
 ### “子弹时间” 
 
-`Time.timeScale`
+`Time.timeScale` 
+
+---
+[Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

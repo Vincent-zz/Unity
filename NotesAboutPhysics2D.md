@@ -22,4 +22,5 @@
 
 触发的条件：参与碰撞的两个物体都有collider且任意一个为触发 
 
+---
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

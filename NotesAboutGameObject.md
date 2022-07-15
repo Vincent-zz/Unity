@@ -40,5 +40,5 @@ void OnTriggerEnter2D(Collider2D coll)
     ...//其他操作，如敌人扣血（当然也可以放在敌人的代码里）
 }
 ``` 
-
+---
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

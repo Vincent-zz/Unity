@@ -102,6 +102,8 @@ public class 郑大儿子 : 郑大
 }
 ``` 
 
+\* 死规定（？）：虚函数与抽象函数在父类与子类都必须是public 
+
 \* 虚函数与重写的区别： 
 
 ```C#
@@ -169,7 +171,7 @@ public class 郑大 : 老郑
 ```C#
 interface 老郑
 {
-    //无需abstract关键字，无需访问修饰符public
+    //无需abstract关键字，访问修饰符public也可直接省略
     void 等待实现1();
     int 等待实现2();
     ...
@@ -185,6 +187,9 @@ public class 郑大 : 老郑
     {
         ...//实现2
     }
+    ...
 }
-```
+``` 
+
+---
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

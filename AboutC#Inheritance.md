@@ -122,7 +122,7 @@ public class 郑大儿子 : 郑大
     Z1_.泡面();//板蓝根泡面
 ``` 
 
-\* 关于base调用父类函数： 
+\* 关于base（重写时调用父类函数）： 
 
 ```C#
 public class 老郑 : Monobehaviour

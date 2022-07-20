@@ -124,5 +124,6 @@ void Start(){
 
 [C#继承](https://github.com/Vincent-zz/Unity/blob/main/AboutC%23Inheritance.md) 
 
+[更多C#语法](https://github.com/Vincent-zz/Unity/blob/main/AboutC%23.md)
 ---
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

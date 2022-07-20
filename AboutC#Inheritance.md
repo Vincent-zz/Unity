@@ -148,7 +148,7 @@ public class 郑大 : 老郑
     {
         while(困)
         {
-            再睡五分钟(&困);
+            再睡五分钟(ref 困);
         }
         base.Start();
     }

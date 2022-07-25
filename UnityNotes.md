@@ -9,6 +9,7 @@
   - **碰撞检测与射线检测** [NotesAboutCollision](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollisionAndRaycast.md)
   - **角色生命** [NotesAboutPlayer-Health](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Health.md)
   - **关于时间** [NotesAboutTime](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTime.md)
+  - **存档**[NotesAboutArchive](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutArchive.md)
 - **动画状态机** [NotesAboutAnimator](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAnimator.md)
 - **瓦片地图** [NotesAboutTilemap](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTilemap.md)
 - **UI** [NotesAboutUI](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutUI.md)  

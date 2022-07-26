@@ -2,7 +2,7 @@
 
 ```C#
 int[] a = new int(10);
-foreach(_a in a)
+foreach(int _a in a)
 {
     _a++;
 }

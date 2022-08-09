@@ -35,9 +35,7 @@ object message = JsonUtility.FromJson(json字符串);//
 ```C#
 string path = Path.Combine(Application.persistentDataPath, 文件名);//Application.persistentDataPath自动对应各平台的储存路径，文件名（包括后缀）可以任意取
 File.WriteAllText(path, json字符串);//创建并写入（已存在则会覆盖）
-
 string messageInJson = File.ReadAllText(path);//读取
-
 ``` 
 
 ---

@@ -49,4 +49,6 @@ class A
     public int a;//public成员默认可序列化
     [SerializeField] private int a_;//private、protected成员通过[SerializeField]实现可序列化（在Inspector窗口中显示及修改）
 }
-```
+``` 
+
+委托、invoke

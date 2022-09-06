@@ -1,11 +1,12 @@
-**粘贴：Instantiate** 
+### 粘贴：Instantiate 
 
 `Instantiate(游戏物件, 位置矢量, 旋转欧拉角);` 
 
-**销毁：Destroy** 
+### 销毁：Destroy 
 
 `Destroy(游戏物件, 时间（float）);`，时间默认为0（然而销毁总是发生在*当前Update结束后*） 
 
+### 对象池
 示例： 
 
 ```C#

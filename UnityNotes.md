@@ -5,7 +5,7 @@
 - **关于物理系统** [NotesAboutPhysics2D](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPhysics2D.md) 
 - **脚本基础** [NotesAboutScript](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutScript.md)
   - **移动实现** [NotesAboutPlayer-Move](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Move.md)
-  - **关于游戏物件的操作** [NotesAboutGameObject](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutGameObject.md)
+  - **关于游戏物体的操作** [NotesAboutGameObject](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutGameObject.md)
   - **碰撞检测与射线检测** [NotesAboutCollision](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutCollisionAndRaycast.md)
   - **血条** [NotesAboutPlayer-Health](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutPlayer-Health.md)
   - **关于时间** [NotesAboutTime](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTime.md)

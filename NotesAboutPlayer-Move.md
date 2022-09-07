@@ -1,19 +1,19 @@
-## 物件移动方法 
+## 物体移动方法 
 
 \* **关于坐标系** 
 
 - Unity2D场景上的“原始坐标系”：x轴向右y轴向上z轴向里（左手螺旋）
-- 以物件为原点的两个坐标系：世界坐标系（轴向与“原始坐标系”相同），自身坐标系（初始轴向与世界坐标系重合，会随旋转改变）
-- 子物件的坐标（position值）为它在**父物件自身坐标系**下的坐标 
+- 以物体为原点的两个坐标系：世界坐标系（轴向与“原始坐标系”相同），自身坐标系（初始轴向与世界坐标系重合，会随旋转改变）
+- 子物体的坐标（position值）为它在**父物体自身坐标系**下的坐标 
 - 获取方向的简便方式：`transform.right`自身坐标系x轴方向，`transform.up`...y轴方向，`transform.forward`...z轴方向；将transform替换为Vector3则表示世界坐标的坐标轴方向
   
-### 物件的转动
+### 物体的转动
 
 **Rotate函数旋转** 
 
 `Transform组件.Rotate(xAngle, yAngle, zAngle,坐标系);` 
 
-最后一项“坐标系”默认值为`Space.Self`，即按此物件自身坐标系的轴进行旋转，若填作`Space.World`则代表按世界坐标系的轴进行旋转 
+最后一项“坐标系”默认值为`Space.Self`，即按此物体自身坐标系的轴进行旋转，若填作`Space.World`则代表按世界坐标系的轴进行旋转 
 
 **四元数（Quaternion）** 
 
@@ -21,7 +21,7 @@ Transform组件的Inspector窗口中Rotation是以欧拉角表示的（x, y, z�
 
 不过仍然可以通过欧拉角表示旋转，例如：`transform.rotation = Quaternion.Euler(xAngle, yAngle, zAngle);`（P.S.`Quaternion Euler(float , float , float )`是Quaternion类的静态函数）
 
-\* 由于旋转操作不改变子子孙孙物件的position值，所以看起来是子子孙孙物件极其自身坐标系与父物件极其自身坐标系“绑定”在一起绕父物件原点旋转
+\* 由于旋转操作不改变子子孙孙物体的position值，所以看起来是子子孙孙物体极其自身坐标系与父物体极其自身坐标系“绑定”在一起绕父物体原点旋转
 
 ### 使用Transform组件移动
 
@@ -31,7 +31,7 @@ Transform组件的Inspector窗口中Rotation是以欧拉角表示的（x, y, z�
 
 这里deltaX指Update()函数每刷一次间隔时间内x方向的位移量，deltaX = Time.deltaTime * speedX 
 
-最后一项坐标系默认值为`Space.Self`，即按此物件自身坐标系进行这个变换，若填作`Space.World`则代表按世界坐标系进行这个变换 
+最后一项坐标系默认值为`Space.Self`，即按此物体自身坐标系进行这个变换，若填作`Space.World`则代表按世界坐标系进行这个变换 
 
 （2）`Transform组件.position += new Vector3(deltaX, deltaY, deltaZ);` 
 

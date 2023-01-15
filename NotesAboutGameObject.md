@@ -77,6 +77,14 @@ void Start(){
 
 `Destroy(游戏物体, 时间（float）);`，时间默认为0（然而销毁总是发生在*当前Update结束后*） 
 
+
+\* 值得注意的是，Instantiate与Destroy并不是立即执行的，而是等当前函数执行完后再执行的，所以如果Instantiate之后立刻获取刚粘贴的物体则会出错（如以下代码），因为此时粘贴并未真正执行 
+
+```C#
+    Instantiate(a, transform.position, transform.rotation);
+    GameObject current = transform.Find("a(Clone)").gameObject;
+    //报错：NullReferenceException: Object reference not set to an instance of an object
+```
 ### 对象池 
 
 频繁地粘贴和销毁会吃性能，比如射击游戏就会有很多子弹的粘贴与销毁，那就要采用对象池来解决这个问题 

@@ -71,7 +71,9 @@ void Start(){
 
 ### 粘贴：Instantiate 
 
-`Instantiate(游戏物体, 位置矢量, 旋转欧拉角);` 
+`public static Object Instantiate (GameObject prefab, Vector3 position, Quaternion rotation, Transform parent);` 
+
+返回粘贴的对象，最后一个参数为父物体的Transform组件，默认为null 
 
 ### 销毁：Destroy 
 
@@ -84,6 +86,8 @@ void Start(){
     Instantiate(a, transform.position, transform.rotation);
     GameObject current = transform.Find("a(Clone)").gameObject;
     //报错：NullReferenceException: Object reference not set to an instance of an object
+    //改正如下：这个函数本来就直接返回粘贴物体的，这样写似乎会强制按序执行（？）
+    GameObject current = Instantiate(a, transform.position, transform.rotation);
 ```
 ### 对象池 
 

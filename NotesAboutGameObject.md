@@ -88,7 +88,10 @@ void Start(){
     //报错：NullReferenceException: Object reference not set to an instance of an object
     //改正如下：这个函数本来就直接返回粘贴物体的，这样写似乎会强制按序执行（？）
     GameObject current = Instantiate(a, transform.position, transform.rotation);
-```
+``` 
+
+\* 对于UI对象使用仍方法一样（RecTransform继承自Transform） 
+
 ### 对象池 
 
 频繁地粘贴和销毁会吃性能，比如射击游戏就会有很多子弹的粘贴与销毁，那就要采用对象池来解决这个问题 

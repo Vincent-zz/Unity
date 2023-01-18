@@ -1,12 +1,12 @@
-## 几个常见概念 
+# 几个常见概念 
 - UI -user interface
 - GUI -graphical UI
 - UGUI -unity GUI
 - NGUI -unity的一个UI插件（next-gen UI）
 - FGUI -[fairyGUI](https://fairygui.com/)，UI编辑器
-## UGUI 
+# UGUI 
 
-### 关于Rect Transform 
+## 关于Rect Transform 
 
 **锚点（Anchors）/中心（Pivot）位置**以父物体/物体左下角为原点，父物体/物体长高分别为横纵单位的坐标中表示（Anchors中max、min的x、y值定位四个小花瓣构成的矩形） 
 
@@ -16,9 +16,9 @@
 
 \* 值得注意的是，锚点中所谓的“距离不变”既可以是像素数不变也可以是整体相对比例不变，见下方的屏幕自适应的内容 
 
-### 控件 
+## 控件 
 
-**Canvas**： 
+### Canvas： 
 
 放置UI的画布，所有UI物体都将作为Canvas的子物体 
 
@@ -28,9 +28,10 @@
 
 2、Canvas Scaler组件设置为`Scale With Screen Size`，整体UI将按屏幕比例缩放，来解决不同屏幕分辨率的问题（若选择`Constant Pixel Size`则是像素角度的距离、大小不变，可能会导致不同分辨率的屏幕下比例失调），`Screen Match Mode`用来设置缩放比的确定方式 
 
-**Panel**：放置UI，统一管理有一定相对位置关系的UI，类似于二级canvas 
+### Panel：放置UI，统一管理有一定相对位置关系的UI，类似于二级canvas 
 
-**Text**/**TextMeshPro**：文字UI 
+### Text/TextMeshPro：文字UI 
+
 
 ---
 [Back to Notes](https://github.com/Vincent-zz/Unity/blob/main/UnityNotes.md)

@@ -1,4 +1,5 @@
 FGUI中
+
 - 组件（Component）类比unity中的Canvas、Panel
 - 组
   - 普通组：仅FGUI内编辑时有效，导出后无效
@@ -10,9 +11,18 @@ FGUI中
   - 组合型原件：按钮、下拉框、滚动条等
   - 特殊原件：列表
 
+导入Unity
+
+- Unity资源商店import免费的FairyGUI package
+- 将要导出的Component设置为导出，右键包选择导出，直接导出至Unity项目文件
+- Unity中新建一个UIPanel（StageCamera伴随着生成），在Inspector窗口中设置包名、组件名
+- 对原相机的culling mask进行设置，使之不渲染UI（否则会渲染两次）
+
 关于图片
 - 九宫格缩放：对话框的缩放方式
 - 填充：血条、技能CD等
+
+FGUI会在导出时生成纹理集，将所有用于制作Component的图片纹理放在几张纹理集图片里，可以单独设置每个图片、动画所在的纹理集编号，但过大的动画可能会出错（不得不将帧放在不同的纹理集中，导致出错） 
 
 关于文本
 - 勾选输入后作为输入框（勾上密码，则*代替）

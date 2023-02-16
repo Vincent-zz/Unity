@@ -56,4 +56,3 @@ class A
 {
     [HideInInspector] public int a;//Inspector窗口中不显示
 }
-委托、invoke

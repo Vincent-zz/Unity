@@ -18,7 +18,7 @@
   - 高级组
     - 导出后类比unity中的Panel
     - 布局：“无”的情况下默认锚点类比unity中小花瓣在上一级的四个角
-- 元件
+- 元件，类比Unity中的按钮、文字等UI
   - 基础元件：文本、图片、动画等
   - 组合型原件：按钮、下拉框、滚动条等
   - 特殊原件：列表
@@ -67,6 +67,7 @@ FGUI会在导出时生成纹理集，将所有用于制作Component的图片纹�
 
 - 可创建补间动画，类似Unity中的制作
 - 组件、元件都能建立各自的动效（图片似乎不行，因为图片元件没有单独的编辑窗口），动效作用的对象是该组件/元件显示列表中的物体（子物体）
+- 组件、元件的动效在Unity中对应UI物体（FGUI中组件、元件本质一样，到了Unity中都是UI物体）上挂载的Animation
 
 **控制器** 
 
@@ -74,7 +75,7 @@ FGUI会在导出时生成纹理集，将所有用于制作Component的图片纹�
 
 [在官网中完整详细的FGUI API](https://fairygui.com/api/html/9b3868b6-73f2-a7b9-0f13-8b1eb3441ecd.htm) 
 
-**GComponent与GObject** 
+**关于GComponent与GObject的基本操作** 
 
 ``` C#
 //此脚本挂载在UIPanel上，以下为组件的取用与生成、元件的取用等基本操作
@@ -86,27 +87,27 @@ using FairyGUI;//
 
 class fguiAPI
 {
-  private GComponent Comp1;//FGUI组件的类型
-  private GComponent Comp2;
+  private GComponent comp1;//FGUI组件的类型
+  private GComponent comp2;
   void Start()
   {
-    Comp1 = GetComponent<UIPanel>().ui;
+    comp1 = GetComponent<UIPanel>().ui;
     //获取该UIPanel名为UIPanel的脚本组件中的名为ui（类型为GComponent）的成员，即该UIPanel所显示的FGUI组件
 
 
-    Comp2 = UIPackage.CreateObject("包名", "组件名").asCom;
+    comp2 = UIPackage.CreateObject("包名", "组件名").asCom;
     //使用UIPackage的静态函数生成指定FGUI组件（不可见）
     //CreateObject(string, string)函数返回的是GObject类型的组件，所以还需后面的类型转换（asCom是静态只读自动属性）
 
 
-    Gbutton buttom1 = Comp1.GetChild("Comp1组件中的某按钮名");
-    GMovieClip movieClip1 = Comp1.GetChild("Comp1组件中的某动画名");
+    Gbutton buttom1 = comp1.GetChild("Comp1组件中的某按钮名");
+    GMovieClip movieClip1 = comp1.GetChild("Comp1组件中的某动画名");
     //获取组件中指定元件的两个例子
   }
 
   void Comp2ShowUp
   {
-    GRoot.inst.AddChild(Comp2);
+    GRoot.inst.AddChild(Ccmp2);
     //Comp2显示（inst是静态只读自动属性）
   }
 }
@@ -128,8 +129,29 @@ Unity中开始运行后
 - 将该组件作为GRoot的子物体
 - 该组件（自动变成）可见
 
-\* 组件（GComponent）、元件（GButtom、GImage、GGroup等）二者虽然在FGUI中处于不同层级，但都是从GObject类继承而来的，有很多通用的属性（FGUI类似于把Canvas以及一部分Panel从UGUI中拿出来单独做一个层级，所以它们本质上是一样的） 
-
-**关于按钮** 
+\* 组件（GComponent）、元件（GButtom、GImage、GGroup等）二者虽然在FGUI中处于不同层级，但都是从GObject类继承而来的，有很多通用的属性（类似于把Canvas以及一部分Panel从UGUI中拿出来单独做一个叫组件的层级，而本质上还是与其他UI一样的） 
 
 **关于动效** 
+
+```C#
+//此脚本挂载在UIPanel上
+class transitionAPI
+{
+  private GComponent comp1;
+  private Transition t1;
+
+  void Start()
+  {
+    comp1 = GetComponent<UIPanel>().ui;//获取组件
+    t1 = comp1.GetTransition("动效名");
+    //从组件中获取动效
+  }
+
+  void Play()
+  {
+    t1.play();//播放动效
+  }
+}
+``` 
+
+**关于按钮** 

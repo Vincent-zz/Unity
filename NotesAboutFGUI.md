@@ -1,4 +1,14 @@
-## FGUI中UI界面的设计
+# FGUI
+
+**FGUI的核心优势** 
+
+将GUI设计中程序和美术的工作（近乎彻底地）分离开来 
+
+美术制作时无需学习引擎、代码，单纯设计即可 
+
+程序制作时无需频繁与美术对接，单纯编写代码即可 
+
+## FGUI中UI界面的设计（美术部分）
 
 **FGUI的层次结构**
 
@@ -13,7 +23,7 @@
   - 组合型原件：按钮、下拉框、滚动条等
   - 特殊原件：列表
 
-**导入Unity**
+**导出FGUI、导入Unity**
 
 - Unity资源商店import免费的FairyGUI package
 - 将要导出的Component设置为导出，右键包选择导出，直接导出至Unity项目文件
@@ -53,11 +63,16 @@ FGUI会在导出时生成纹理集，将所有用于制作Component的图片纹�
   - 左右居中：左右到被关联物体中线距离不变
   - 加%后：会有缩放...
 
-**动效**：可创建补间动画，类似Unity中的制作 
+**动效**
+
+- 可创建补间动画，类似Unity中的制作
+- 组件、元件都能建立各自的动效（图片似乎不行，因为图片元件没有单独的编辑窗口），动效作用的对象是该组件/元件显示列表中的物体（子物体）
 
 **控制器** 
 
-## 脚本API 
+## 脚本API（程序部分） 
+
+[在官网中完整详细的FGUI API](https://fairygui.com/api/html/9b3868b6-73f2-a7b9-0f13-8b1eb3441ecd.htm) 
 
 **GComponent与GObject** 
 
@@ -75,21 +90,46 @@ class fguiAPI
   private GComponent Comp2;
   void Start()
   {
-    Comp1 = GetComponent<UIPanel>().ui;//获取该UIPanel名为UIPanel的脚本组件中的名为ui（类型为GComponent）的成员，即该UIPanel所显示的FGUI组件
+    Comp1 = GetComponent<UIPanel>().ui;
+    //获取该UIPanel名为UIPanel的脚本组件中的名为ui（类型为GComponent）的成员，即该UIPanel所显示的FGUI组件
 
-    Comp2 = UIPackage.CreateObject("包名", "组件名").asCom;//使用UIPackage的静态函数生成指定FGUI组件
+
+    Comp2 = UIPackage.CreateObject("包名", "组件名").asCom;
+    //使用UIPackage的静态函数生成指定FGUI组件（不可见）
+    //CreateObject(string, string)函数返回的是GObject类型的组件，所以还需后面的类型转换（asCom是静态只读自动属性）
+
 
     Gbutton buttom1 = Comp1.GetChild("Comp1组件中的某按钮名");
     GMovieClip movieClip1 = Comp1.GetChild("Comp1组件中的某动画名");
     //获取组件中指定元件的两个例子
   }
+
+  void Comp2ShowUp
+  {
+    GRoot.inst.AddChild(Comp2);
+    //Comp2显示（inst是静态只读自动属性）
+  }
 }
 ``` 
 
-[关于GObject的API（官网）](https://www.fairygui.com/api/html/b5f50d9a-75cf-31d8-0102-4760413ba85c.htm) 
+Unity中开始运行后
 
-[关于GComponent的API（官网）](https://www.fairygui.com/api/html/2a055c04-917b-2408-3841-c5c910eba6f9.htm) 
+- 与UIPanel关联的FGUI组件会作为UIPanel的子物体生成
+- 组件内的元件作为该组件的子物体生成
+- 一个名为Stage的DontDestroyOnLoad物体会生成，它会有一个名为GRoot的子物体
 
-\* 组件（GComponent）、元件（GButtom、GImage、GGroup等）二者虽然在FGUI中处于不同层级，但都是从GObject类继承而来的，有很多通用的属性（FGUI类似于把Canvas以及一部分Panel从UGUI中拿出来单独做一个层级，但它们本质上还是UI） 
+`UIPackage.CreateObject`生成指定FGUI组件后
 
-****
+- 该组件作为DontDestroyOnLoad物体生成
+- 该组件为不可见状态
+
+显示组件的过程
+
+- 将该组件作为GRoot的子物体
+- 该组件（自动变成）可见
+
+\* 组件（GComponent）、元件（GButtom、GImage、GGroup等）二者虽然在FGUI中处于不同层级，但都是从GObject类继承而来的，有很多通用的属性（FGUI类似于把Canvas以及一部分Panel从UGUI中拿出来单独做一个层级，所以它们本质上是一样的） 
+
+**关于按钮** 
+
+**关于动效** 

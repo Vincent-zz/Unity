@@ -4,6 +4,9 @@
 - UGUI -unity GUI
 - NGUI -unity的一个UI插件（next-gen UI）
 - FGUI -[fairyGUI](https://fairygui.com/)，UI编辑器
+
+[感觉和UGUI相比还是FGUI更好用](NotesAboutFGUI.md) 
+
 # UGUI 
 
 ## 关于Rect Transform 

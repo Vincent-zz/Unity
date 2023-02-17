@@ -25,6 +25,7 @@ public class A
             _a = value;
         }
     }
+    public int b{get;set;}//自动实现
 }
 class Program
 {

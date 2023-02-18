@@ -150,9 +150,13 @@ class transitionAPI
   void Start()
   {
     comp1 = GetComponent<UIPanel>().ui;//获取组件
+
     t1 = comp1.GetTransition("动效1名");
     t2 = comp1.GetTransition("动效2名");
     //从组件中获取动效
+
+    t1.SetHook("标签名", ()=>{HookFunction();});
+    //设置标签对应的帧事件
   }
 
   void Play()
@@ -161,6 +165,11 @@ class transitionAPI
 
     t2.play(()=>{AfterTheEnd();});
     //播放动效，并在播放完后执行AfterTheEnd函数
+  }
+
+  void HookFunction()
+  {
+    //标签处执行的代码（帧事件）
   }
 
   void AfterTheEnd()

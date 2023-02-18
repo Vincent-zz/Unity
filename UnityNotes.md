@@ -12,4 +12,5 @@
   - **存档**[NotesAboutArchive](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutArchive.md)
 - **动画** [NotesAboutAnimator](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutAnimator.md)
 - **瓦片地图** [NotesAboutTilemap](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutTilemap.md)
-- **UI** [NotesAboutUI](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutUI.md)  
+- **UI** [NotesAboutUI](https://github.com/Vincent-zz/Unity/blob/main/NotesAboutUI.md)
+- **FGUI**[NotesAboutFGUI](NotesAboutFGUI.md)

@@ -68,6 +68,7 @@ FGUI会在导出时生成纹理集，将所有用于制作Component的图片纹�
 - 可创建补间动画，类似Unity中的制作
 - 组件、元件都能建立各自的动效（图片似乎不行，因为图片元件没有单独的编辑窗口），动效作用的对象是该组件/元件显示列表中的物体（子物体）
 - 组件、元件的动效在Unity中对应UI物体（FGUI中组件、元件本质一样，到了Unity中都是UI物体）上挂载的Animation
+- 标签：类似Unity中帧事件，可以理解为帧事件的一处标记，而该标记对应的程序代码则在Unity中由程序员实现
 
 **控制器** 
 
@@ -100,15 +101,21 @@ class fguiAPI
     //CreateObject(string, string)函数返回的是GObject类型的组件，所以还需后面的类型转换（asCom是静态只读自动属性）
 
 
-    Gbutton buttom1 = comp1.GetChild("Comp1组件中的某按钮名");
-    GMovieClip movieClip1 = comp1.GetChild("Comp1组件中的某动画名");
-    //获取组件中指定元件的两个例子
+    GButton buttom1 = comp1.GetChild("Comp1组件中的某按钮名").asButton;
+    GObject movieClip1 = comp1.GetChild("Comp1组件中的某动画名");
+    //获取组件中指定元件的两个例子(GetChild方法最终获取到的类型为GObject)
   }
 
   void Comp2ShowUp
   {
-    GRoot.inst.AddChild(Ccmp2);
+    GRoot.inst.AddChild(Comp2);
     //Comp2显示（inst是静态只读自动属性）
+  }
+
+  void Comp2GetRemoved
+  {
+    GRoot.inst.RemoveChild(Comp2);
+    //Comp2被去除
   }
 }
 ``` 
@@ -138,20 +145,55 @@ Unity中开始运行后
 class transitionAPI
 {
   private GComponent comp1;
-  private Transition t1;
+  private Transition t1, t2;
 
   void Start()
   {
     comp1 = GetComponent<UIPanel>().ui;//获取组件
-    t1 = comp1.GetTransition("动效名");
+    t1 = comp1.GetTransition("动效1名");
+    t2 = comp1.GetTransition("动效2名");
     //从组件中获取动效
   }
 
   void Play()
   {
     t1.play();//播放动效
+
+    t2.play(()=>{AfterTheEnd();});
+    //播放动效，并在播放完后执行AfterTheEnd函数
+  }
+
+  void AfterTheEnd()
+  {
+    //动效播放完后执行的代码
   }
 }
 ``` 
 
-**关于按钮** 
+**关于按钮**  
+
+```C#
+//此脚本挂载在UIPanel上
+class buttonAPI
+{
+  private GComponent comp1;
+  private GButton b1;
+
+  void Start()
+  {
+    comp1 = GetComponent<UIPanel>().ui;
+    b1 = comp1.GetChild("按钮名"),asButton;//获取，返回GObject类
+
+    b1.onClick.Add(()=>{Clicked();});
+    //为按钮添加按下后要执行的函数
+    //onClick是EventListener类型的静态只读自动属性
+    //onClick与Add()是从GObject继承而来的，所以即使没有类型转换也可以直接使用.onClick.Add()
+  }
+
+  void Clicked()
+  {
+    //按下后要执行的代码
+  }
+}
+``` 
+

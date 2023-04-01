@@ -57,3 +57,11 @@ class A
 {
     [HideInInspector] public int a;//Inspector窗口中不显示
 }
+``` 
+
+字典类 
+
+```C#
+Dictionary<type1, type2> myDic = new Dictionary<type1, type2>();
+myDic.Add(key1, value1);
+```

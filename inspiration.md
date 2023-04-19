@@ -50,11 +50,13 @@
 
 **故事**： 
 
-b、hk式大型且沉重，kz电影式
+b、hk式大型且沉重，kz电影式，混乱荒诞式 
 
 curse blade 
 
 “gods envy us because we are mortal” 
+
+“banished by death” 
 
 “我只是杀人的时候运气好——不可饶恕” 
 

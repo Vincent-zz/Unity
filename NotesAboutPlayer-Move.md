@@ -17,7 +17,7 @@
 
 **四元数（Quaternion）** 
 
-Transform组件的Inspector窗口中Rotation是以欧拉角表示的（x, y, z），但Unity内部以四元数储存旋转（x, y, z, w），四元数涉及了一些beyond me的数学知识\[捂脸\]，正如Unity官方文档所述“除非您十分了解四元数，否则不要直接进行此种修改。” 
+Transform组件的Inspector窗口中Rotation是以欧拉角表示的（x, y, z），但Unity内部以四元数储存旋转（x, y, z, w），四元数涉及了一些beyond me的数学知识，正如Unity官方文档所述“除非您十分了解四元数，否则不要直接进行此种修改。” 
 
 不过仍然可以通过欧拉角表示旋转，例如：`transform.rotation = Quaternion.Euler(xAngle, yAngle, zAngle);`（P.S.`Quaternion Euler(float , float , float )`是Quaternion类的静态函数）
 

@@ -1,5 +1,8 @@
-### 延时 
+### 延时
+
 **简陋计时器** 
+
+`Time.deltaTime`
 
 **Invoke** 
 
@@ -25,6 +28,14 @@ IEnumerator 协程函数名(参数)
 停止：`StopCoroutine("协程函数名");`（背后有点小复杂） 
 
 \* 已经启动的invoke与coroutine不会因SetActive(false)而停止 
+
+协程来自Mono类，非Mono类如何使用协程？ 
+
+```C#
+
+
+
+``` 
 
 ### “子弹时间” 
 
